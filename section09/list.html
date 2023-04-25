@@ -5,24 +5,123 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* 전체 스타일 */
+            /* 상하 좌우 여백 제거 */
+        }
+        
+        li {
+            list-style: none;
+            /* 리스트 앞에 붙는 동그라미 안보이게 하게 */
+        }
+
+        body {
+            background-color: rgb(40, 40, 40);
+            /* 배경색 */
+        }
+
+        #section-style {
+            padding: 0 16px;
+            /* 페이지의 왼쪽 여백 */
+        }
+
+        .Outter-listname {
+            border-bottom: 1px solid rgb(200, 200, 200);
+            padding: 8px 0;
+            /* 리스트 구분선 두께 및 선색 */
+            /* 구분선 위아래 간격 */
+        }
+
+        .Outter-listname>label {
+            display: block;
+            color: rgb(225, 225, 225);
+            width: 100%;
+            padding: 4px 0; 
+            /* 리스트 위아래 간격 */
+        }
+
+        .Outter-listname>input {
+            display: none;
+            /* input의 체크박스 안보이게 하기 */
+        }       
+      
+        /* .outter-list>input:checked+.inner-list-contaianer {
+            height: 0px;
+            overflow: hidden;
+
+        } */
+
+        .Outter-listname>input:checked+.Inner-listname-onoff {
+            height: 0px;
+            overflow: hidden;
+            /* input를 체크했을 경우 작동하는 옵션 */
+        }
+        /* 왜 작동 안하지??? */
+        
+        .Inner-listname>a {
+            display: block;
+            padding: 4px;
+            color: rgb(175, 175, 175);
+            text-decoration: none;
+            /* 링크 스타일의 밑줄 속성 제거 */
+            font-size: 14px;
+            font-weight: bold;
+            /* 리스트 내용 속성 */
+        }
+        /* 스타일은 밑에 위로 순서대로 적용(가장 밑부분이 최우선 순위) */
+    </style>
 </head>
 <body>
-    <ul class="outter-list-content">
-        <li class="outter-list">
-            <label for="쇼핑 및 알아보기">쇼핑 및 알아보기</label>
-            <input type="checkbox" id="쇼핑 및 알아보기">
-            <ul class="inner-list-content">
-                <li class="inner-list">
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                </li>
+    <section id="section-style">
+    <!-- 섹션 스타일 = 좌우 여백 16px -->
 
-            </ul>
+        <ul>
+            <li class="Outter-listname">
+                <label for="listname">리스트 제목 1</label>
+                <!-- label은 input의 id를 가져와 텍스트 클릭이 가능하게 해줌 -->
+                <input type="checkbox" name="" id="listname">
+                <!-- input는 타입에 따라 체크박스 등 클릭을 통한 상호작용 -->
+                <ul class=".Inner-listname-onoff">
+                    <!-- 이거 왜 작동 안함? -->
+                    <li class="Inner-listname">
+                        <a href="#">내용 1</a>
+                        <!-- 리스트의 a href의 "#"은 임시 링크 -->
+                    </li>
+                    <li class="Inner-listname">
+                        <a href="#">내용 2</a>
+                    </li>
+                    <li class="Inner-listname">
+                        <a href="#">내용 3</a>
+                    </li>
+                    <li class="Inner-listname">
+                        <a href="#">내용 4</a>
+                    </li>   
+                </ul>
+            </li>
+            <li class="Outter-listname">
+                <label for="listname">리스트 제목 2</label>
+                <input type="checkbox" name="" id="listname">
+                <ul class=".Inner-listname-onoff">
+                    <li class="Inner-listname">
+                        <a href="#">내용 1</a>
+                    </li>
+                    <li class="Inner-listname">
+                        <a href="#">내용 2</a>
+                    </li>
+                    <li class="Inner-listname">
+                        <a href="#">내용 3</a>
+                    </li>
+                    <li class="Inner-listname">
+                        <a href="#">내용 4</a>
+                    </li>   
+                </ul>
+            </li>
+        </ul>
 
-        </li>
-
-    </ul>
+    </section>
 </body>
 </html>
+footer 2023-04-23  
