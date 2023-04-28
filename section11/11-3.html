@@ -23,11 +23,110 @@
             display: block;
             border: none;
         }
+        
         body {
-            font-family: 'verdana';
+            font-family: 'Verdana';
             font-size: 14px;
             color: black;
             line-height: 28px;
+            /* 문단 간격 */
+        }
+
+        header {
+            width: 1000px;
+            height: 100px;
+            margin: 0 auto;
+            margin-top: 10px;
+            border: 2px solid black;
+            overflow: hidden;
+            /* float로 정렬할 경우 필수!! */
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            width: 200px;
+            line-height: 100px;
+            background-color: yellow;
+            float: left;
+            text-align: center;
+        }
+
+        nav {
+            float: right;
+            overflow: hidden;
+            position: relative;
+        }
+
+        nav ul {
+            overflow: hidden;
+            background-color: antiquewhite;
+        }
+
+        nav ul:nth-of-type(1) li {
+            float: left;
+            padding-left: 20px;
+            background-color: yellow;
+            line-height: 30px;
+        }
+
+        nav ul:nth-of-type(2) li {
+            float: left;
+            padding-left: 20px;
+            background-color: orange;
+            line-height: 30px;
+            margin-top: 40px;
+        }
+
+        #main {
+            width: 1000px;
+            overflow: hidden;
+            margin: 10px auto;
+        }
+
+        #main section {
+            width: 700px;
+            overflow: hidden;
+            float: left;
+        }
+
+        #main section article{
+            width: 700px;
+            border: 2px solid black;
+            overflow: hidden;
+            padding: 20px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        article>h2 {
+            background-color: antiquewhite;
+        }
+
+        aside {
+            width: 280px;
+            float: right;
+            overflow: hidden;
+            border: 2px solid black;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        aside .bannerbox {
+            background-color: gray;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        footer {
+            width: 1000px;
+            height: 50px;
+            line-height: 50px;
+            margin: 10px auto;
+            border: 2px solid black;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: antiquewhite;
         }
     </style>
 </head>
@@ -53,32 +152,30 @@
 
     <div id="main">
         <section>
-           <article>
-            <h2>Main Article</h2>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ea? Temporibus, labore. Cumque ullam laudantium ratione officia aliquam fuga delectus, illo enim? Perspiciatis ipsam minima autem enim sit deleniti officia?
-            </p>
+            <article>
+                <h2>Main Article</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad! Consectetur rem illum praesentium in accusamus, enim, harum esse odio nobis labore beatae ipsam qui deleniti fugit est repellendus dolores!</p>
+            </article>
 
-           </article>
+            <article>
+                <h2>Main Article</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt fugit nostrum enim tempora? Officia mollitia ad voluptatum laborum. Quaerat obcaecati id voluptatibus magnam aspernatur enim blanditiis inventore laudantium tenetur praesentium!
+                </p>
+            </article>
 
-           <article>
-            <h2>Main Article</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora molestias ducimus non, veniam similique ut iure error? At quas, voluptatibus reiciendis id fugiat deleniti consectetur deserunt, maiores blanditiis aliquam eaque.
-            </p>
-           </article>
-
-           <article>
-            <h2>main Article</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, ratione et. Provident ut itaque sed, atque quisquam dolorum qui saepe! Natus sint explicabo quae perferendis ipsam tenetur ut laboriosam autem!
-            </p>
-           </article>
+            <article>
+                <h2>Main Article</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt fugit nostrum enim tempora? Officia mollitia ad voluptatum laborum. Quaerat obcaecati id voluptatibus magnam aspernatur enim blanditiis inventore laudantium tenetur praesentium!
+                </p>
+            </article>
         </section>
+
         <aside>
             <h2>Right aside</h2>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium facere quibusdam id nesciunt quasi libero quis dolores ex ullam blanditiis repudiandae, cum quam enim, et maiores laborum. Ab, explicabo sunt.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ratione officia nam voluptates, dignissimos maxime illo magnam accusamus quia, labore saepe quam voluptate veniam at nihil debitis cum excepturi aut.
             </p>
             <label for="email">Mail</label>
             <input type="email" />
@@ -93,5 +190,6 @@
     <footer>
         <p>HTML5 COPYRIGHT</p>
     </footer>
+    
 </body>
 </html>
